@@ -33,6 +33,12 @@ if [[ -e /etc/ssl/certs/ca-certificates.crt ]] ; then
     cacertParam='--cacert /etc/ssl/certs/ca-certificates.crt'
 fi
 
-echo "Upgrading from Spectrecoin to Alias (${versionToInstall}):"
+echo
+echo "You are running Spectrecoin on this machine but the project has rebranded to"
+echo "Alias (https://alias.cash/). To update to the Alias wallet, execute the"
+echo "following cmd on the same cmdline, where you use the Shell-UI:"
+echo
+echo "curl ${cacertParam} -L -s https://raw.githubusercontent.com/aliascash/installer/master/linux/migrateSpectrecoinToAlias.sh | bash -s '${versionToInstall}'"
+echo
 
-curl ${cacertParam} -L -s https://raw.githubusercontent.com/aliascash/installer/master/linux/migrateSpectrecoinToAlias.sh | bash -s "${versionToInstall}"
+exit
