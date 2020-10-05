@@ -40,7 +40,7 @@ echo "following cmd on the same cmdline, where you use the Shell-UI:"
 echo
 echo "curl ${cacertParam} -L -s https://raw.githubusercontent.com/aliascash/installer/master/linux/migrateSpectrecoinToAlias.sh | bash -s '${versionToInstall}'"
 echo
-echo "If you want to perform the update now, you need to"
-echo "cancel the restart of Spectrecoin with 'Ctrl C'!"
+echo "If you want to perform the update now, perform the given cmd."
+echo "Otherwise just restart the Shell-UI"
 echo
-exit
+kill -INT $$
